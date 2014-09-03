@@ -6,7 +6,7 @@
 #*   By: gbadi <guillaume.badi@gmail.com>           +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2014/09/02 14:41:59 by gbadi             #+#    #+#             *#
-#*   Updated: 2014/09/02 19:10:14 by gbadi            ###   ########.fr       *#
+#*   Updated: 2014/09/02 21:11:40 by gbadi            ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -23,8 +23,12 @@ OBJS = *.o
 FLAGS = -Wall -Werror -Wextra
 
 all: libstr
-	gcc -o $(NAME) $(MAIN) $(LIB)
+	gcc -o $(NAME) $(MAIN) $(LIB) $(FLAGS)
+
+quick:
+	gcc -o $(NAME) $(MAIN) $(LIB) $(FLAGS)
+
 
 libstr:
-	gcc -c $(SOURCE)
+	gcc -c $(SOURCE) $(FLAGS)
 	ar rc $(LIB) $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: gbadi <guillaume.badi@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/02 14:47:26 by gbadi             #+#    #+#             */
-/*   Updated: 2014/09/02 19:55:28 by gbadi            ###   ########.fr       */
+/*   Updated: 2014/09/03 15:32:01 by gbadi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,8 @@ t_str			*ft_strshift(t_str *str);
 t_str			*ft_strdud(t_str *str);
 t_str			*ft_strcat(t_str *s1, t_str *s2);
 t_str			*ft_strunshift(t_str *str, char c);
+char			ft_strget(t_str *str, int index);
+t_str			*ft_str_getnode(t_str *str, int index);
+int				ft_strcmp(t_str *s1, t_str *s2);
 
 #endif
