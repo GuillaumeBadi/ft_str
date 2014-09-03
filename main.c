@@ -6,7 +6,7 @@
 /*   By: gbadi <guillaume.badi@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/02 19:00:09 by gbadi             #+#    #+#             */
-/*   Updated: 2014/09/03 18:00:17 by gbadi            ###   ########.fr       */
+/*   Updated: 2014/09/03 18:19:31 by gbadi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int			main(int argc, char *argv[])
 {
 	t_str		*str;
-	t_str		*str2;
 
-	str = ft_str("Hello World");
-	str2 = ft_str("Hello World bla");
-	printf("%d\n", ft_str_indexOf(str, str2));
+	str = ft_str("GUillaume");
+	ft_strset(str, 1, 'u');
+	ft_strpush(str, 'u');
+	ft_putstr(str);
 	(void)argc;
 	(void)argv;
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: gbadi <guillaume.badi@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/02 14:50:12 by gbadi             #+#    #+#             */
-/*   Updated: 2014/09/03 17:59:32 by gbadi            ###   ########.fr       */
+/*   Updated: 2014/09/03 18:19:20 by gbadi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ t_str			*ft_strshift(t_str *str)
 	current = str;
 	next = current->next;
 	free(current);
+	str = next;
 	return (next);
 	
 }
@@ -150,6 +151,22 @@ char			ft_strget(t_str *str, int index)
 		i++;
 	}
 	return (current->c);
+}
+
+t_str			*ft_strset(t_str *str, int index, char c)
+{
+	t_str		*current;
+	int			i;
+
+	i = 0;
+	current = str;
+	while (i < index)
+	{
+		current = current->next;
+		i++;
+	}
+	current->c = c;
+	return (str);
 }
 
 int				ft_strcmp(t_str *s1, t_str *s2)
